@@ -8,7 +8,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
 
-urlB = "https://twitter.com/IssRelocations"malhar
+urlB = "https://twitter.com/IssRelocations"
 # set up the driver
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.maximize_window()

@@ -1,0 +1,1 @@
+with open('test.text') as file:

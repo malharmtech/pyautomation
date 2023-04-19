@@ -1,7 +1,22 @@
-with open('test.text', 'r') as reader:
-    content = reader.readlines()
-    reversed(content)
-    with open('test.text', 'w') as writer:
-        for line in reversed(content):
-            writer.write(line)
-            
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+import select
+
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+driver.maximize_window()
+
+driver.get("https://rahulshettyacademy.com/AutomationPractice/")
+
+checkbox = driver.find_elements(By.XPATH, "//input[@type='radio']")
+print(len(checkbox))
+
+for radio in checkbox:
+    if radio.get_attribute("value") == "radio1":
+        radio.click()
+        break

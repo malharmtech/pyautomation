@@ -22,18 +22,35 @@
 
 # Fibonacci series program
 
-n = int(input("Enter the number:"))
+# n = int(input("Enter the number:"))
+#
+# a,b = 0,1
+#
+# if n <= 0:
+#     print("please enter positive integer")
+# elif n == 1:
+#     print("fibo sequence upto",n, ":")
+#     print(a)
+# else:
+#     print("fibo seq:")
+#     for i in range(n):
+#         print(a)
+#         c = a+b
+#         a ,b = b, c
 
-a,b = 0,1
+ # Fibonacci series program recursive
+
+def fibonacci(n):
+    if n <= 1:
+        return  n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+n = int(input("enter number:"))
 
 if n <= 0:
-    print("please enter positive integer")
-elif n == 1:
-    print("fibo sequence upto",n, ":")
-    print(a)
+   print("please enter integer")
 else:
-    print("fibo seq:")
+    print("fibo seq")
     for i in range(n):
-        print(a)
-        c = a+b
-        a ,b = b, c
+        print(fibonacci(i))

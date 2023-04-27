@@ -349,6 +349,7 @@ def test_resource(driver):
     review = driver.find_element(By.XPATH, '/html/body/div[1]/div/header/div/div/div/section[2]/div/div/div[2]/div/div/div/div/nav/ul/li[4]/ul/li[1]/ul/li[1]/a')
     review.click()
     time.sleep(5)
+
     total_height = int(driver.execute_script("return document.body.scrollHeight"))
     for i in range(1, total_height, 5):
         driver.execute_script("window.scrollTo(0, {});".format(i))

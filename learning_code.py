@@ -1,26 +1,39 @@
-# from selenium.webdriver.common.action_chains import ActionChains
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
-# import time
-# from selenium import webdriver
-# from selenium.webdriver.chrome.service import Service
-# from webdriver_manager.chrome import ChromeDriverManager
-# from selenium.webdriver.common.by import By
-# import select
-#
-# driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-# driver.maximize_window()
-#
-# driver.get("https://rahulshettyacademy.com/AutomationPractice/")
-#
-# checkbox = driver.find_elements(By.XPATH, "//input[@type='radio']")
-# print(len(checkbox))
-#
-# for radio in checkbox:
-#     if radio.get_attribute("value") == "radio1":
-#         radio.click()
-#         break
+# reverse int program
+# n = int(input("please give a number : "))
+# print("before reverse your numeber is :" ,n)
+# reverse = 0
+# while n!=0:
+#     reverse = reverse*10 + n%10
+#     n = (n//10)
+# print("after reverse: %d" %reverse)
 
-age = 36
-txt = "My name is John, and I am {}"
-print(txt.format(age))
+
+# Prime Number Program
+# num = 11
+# if num > 1:
+# 	for i in range(2, int(num/2)+1):
+# 		if (num % i) == 0:
+# 			print(num, " is not prime")
+# 			break
+# 		else:
+# 			print(num, "number is prime")
+# else:
+# 	print(num, "is not prime")
+
+# Fibonacci series program
+
+n = int(input("Enter the number:"))
+
+a,b = 0,1
+
+if n <= 0:
+    print("please enter positive integer")
+elif n == 1:
+    print("fibo sequence upto",n, ":")
+    print(a)
+else:
+    print("fibo seq:")
+    for i in range(n):
+        print(a)
+        c = a+b
+        a ,b = b, c

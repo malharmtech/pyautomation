@@ -1,6 +1,5 @@
 import pytest
 @pytest.mark.smoke
-@pytest.mark.skip
 def test_firstprogram():
     a = 5
     b = 8
